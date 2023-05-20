@@ -1,3 +1,5 @@
+#include "OrderBookEntry.h"
+
 #ifndef menu_h
 #define menu_h
 
@@ -11,6 +13,8 @@ void enter_bid();
 void print_wallet();
 void next_time_frame();
 bool exit_program();
+
+double computeAveragePrice(std::vector<OrderBookEntry>& entries);
 
 
 #endif // !MENU_H
