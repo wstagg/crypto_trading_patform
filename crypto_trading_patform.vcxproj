@@ -184,11 +184,13 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
-    <ClCompile Include="OrderBookEntry.cpp" />
+    <ClCompile Include="Order_book_entry.cpp" />
+    <ClCompile Include="order_book_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="menu.h" />
-    <ClInclude Include="OrderBookEntry.h" />
+    <ClInclude Include="Order_book_entry.h" />
+    <ClInclude Include="order_book_functions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

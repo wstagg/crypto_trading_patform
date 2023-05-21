@@ -1,7 +1,6 @@
 #include <iostream>
-#include<vector>
 #include "menu.h"
-#include"OrderBookEntry.h"
+#include"Order_book_entry.h"
 
 
 /* Prints menu */
@@ -123,15 +122,3 @@ bool exit_program()
     std::exit(0);
 }
 
-double computeAveragePrice(std::vector<OrderBookEntry>& entries)
-{
-    double total{ 0 };
-    
-    for (int i{ 0 }; i < entries.size(); ++i)
-    {
-        total += entries[i].price;
-    }
-
-    return total / entries.size();
-   
-}
