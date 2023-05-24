@@ -13,8 +13,6 @@
 #include "Merkel_main.h"
 
 
-
-
 int main()
 {
     Merkel_main app;
