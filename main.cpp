@@ -15,9 +15,21 @@
 
 int main()
 {
-    Merkel_main app;
-    app.init();
+   
+    
+    //Merkel_main app;
+    //app.init();
 
+    std::string test = "thing1,thing2,thing3" ;
+
+    std::vector<std::string> tokens ;
+    tokens = tokenise(test, ',');
+
+    for (std::string s : tokens)
+    {
+        std::cout << s << std::endl;
+    }
+  
     return 0;
 
 }

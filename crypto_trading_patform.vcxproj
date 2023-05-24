@@ -186,6 +186,7 @@
     <ClCompile Include="Merkel_main.cpp" />
     <ClCompile Include="Order_book_entry.cpp" />
     <ClCompile Include="order_book_functions.cpp" />
+    <ClCompile Include="tokenise.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Merkel_main.h" />
