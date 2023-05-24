@@ -3,7 +3,6 @@
 
 enum class Order_book_type {bid, ask};
 
-
 class Order_book_entry
 {
 

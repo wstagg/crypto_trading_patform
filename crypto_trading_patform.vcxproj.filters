@@ -18,24 +18,24 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="menu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Order_book_entry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="order_book_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Merkel_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="menu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Order_book_entry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="order_book_functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Merkel_main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

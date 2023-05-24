@@ -183,12 +183,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="Merkel_main.cpp" />
     <ClCompile Include="Order_book_entry.cpp" />
     <ClCompile Include="order_book_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="menu.h" />
+    <ClInclude Include="Merkel_main.h" />
     <ClInclude Include="Order_book_entry.h" />
     <ClInclude Include="order_book_functions.h" />
   </ItemGroup>
