@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build",
+  "command": "/usr/bin/clang++    -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/crypto_trading_platform.dir/main.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/main.cpp",
+  "file": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/main.cpp",
+  "output": "CMakeFiles/crypto_trading_platform.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build",
+  "command": "/usr/bin/clang++    -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Merkel_main.cpp",
+  "file": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/Merkel_main.cpp",
+  "output": "CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o"
+},
+{
+  "directory": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build",
+  "command": "/usr/bin/clang++    -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.cpp",
+  "file": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.cpp",
+  "output": "CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o"
+},
+{
+  "directory": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build",
+  "command": "/usr/bin/clang++    -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/order_book_functions.cpp",
+  "file": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/order_book_functions.cpp",
+  "output": "CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o"
+},
+{
+  "directory": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build",
+  "command": "/usr/bin/clang++    -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/crypto_trading_platform.dir/tokenise.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/tokenise.cpp",
+  "file": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/tokenise.cpp",
+  "output": "CMakeFiles/crypto_trading_platform.dir/tokenise.cpp.o"
+}
+]
