@@ -11,10 +11,31 @@ CSV_reader::CSV_reader()
 
 }
 
-std::vector<Order_book_entry> CSV_reader::read_csv(std::string csv_file)
+std::vector<Order_book_entry> CSV_reader::read_csv(std::string csv_file_name)
 {
+    std::fstream csv_file (csv_file_name);
+    std::string line {};
+
+    std::vector <std::string> tokens;
     std::vector<Order_book_entry> entries;
 
+    if( csv_file.is_open())
+    {
+        while(std::getline(csv_file, line))
+        {
+            try
+            {
+                Order_book_entry obj = strings_to_obe(tokenise(line, ','));
+                entries.push_back(obj);
+            }
+            catch(const std::exception& e )
+            {
+                std::cout << "CSV_reader::read_csv read bad data" << std::endl;
+            }
+        }
+    }
+
+    std::cout << "CSV_reader::read_csv read:" << entries.size() << std::endl;
     return entries;
 
 }
@@ -51,7 +72,7 @@ Order_book_entry CSV_reader::strings_to_obe(std::vector<std::string> tokens)
     return obj;
 }
 
-
+/* Tokenises CSV lines */
 std::vector<std::string> CSV_reader::tokenise(std::string csv_line, char seperator)
 {
     std::vector<std::string> tokens;

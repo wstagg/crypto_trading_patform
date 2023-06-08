@@ -1,8 +1,8 @@
 #include "Merkel_main.h"
 #include <iostream>
 #include <vector>
-#include "Order_book_entry.h"
-#include "order_book_functions.h"
+#include "CSV_reader.h"
+
 
 
 Merkel_main::Merkel_main()
@@ -24,19 +24,7 @@ void Merkel_main::init()
 
 void Merkel_main::load_orderbook()
 {
-    Order_book_entry obj1{ "2020/03/17 17:01:24.884492", "BTC/USD", Order_book_type::bid, 50.056, 200.45 };
-    Order_book_entry obj2{ "2020/03/17 17:01:24.884492", "BTC/USD", Order_book_type::ask, 3848.33, 29485.3 };
-    Order_book_entry obj3{ "2020/03/17 17:01:24.884492", "BTC/USD", Order_book_type::ask, 23.4, 29485.3 };
-    Order_book_entry obj4{ "2020/03/17 17:01:24.884492", "BTC/USD", Order_book_type::ask, 4748.33, 29485.3 };
-
-    entries.push_back(obj1);
-    entries.push_back(obj2);
-    entries.push_back(obj3);
-    entries.push_back(obj4);
-
-    std::cout << "the average price is " << compute_average_price(entries) << std::endl;
-    std::cout << "the lowest price is " << compute_low_price(entries) << std::endl;
-    std::cout << "the highest price is " << compute_high_price(entries) << std::endl;
+    orders = CSV_reader::read_csv("20200317.csv");
 }
 
 
@@ -125,7 +113,25 @@ void Merkel_main::print_help()
 /* Prints market stats */
 void Merkel_main::print_market_stats()
 {
-    std::cout << "The orderbook contains: " << entries.size() << std::endl;
+    std::cout << "The orderbook contains: " << orders.size() << std::endl;
+
+    unsigned int asks {0};
+    unsigned int bids {0};
+
+    for (Order_book_entry& e : orders)
+    {
+        if ( e.order_type == Order_book_type::bid)
+        {
+            ++bids;
+        }
+        if ( e.order_type == Order_book_type::ask)
+        {
+            ++asks;
+        }
+    }
+
+    std::cout << "Total asks: " << asks << std::endl;
+    std::cout << "Total bids: " << bids << std::endl;
 }
 
 /* User offer */

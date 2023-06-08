@@ -22,7 +22,7 @@ private:
 	void next_time_frame();
 	bool exit_program();
 
-	std::vector<Order_book_entry> entries;
+	std::vector<Order_book_entry> orders;
 
 
 };
