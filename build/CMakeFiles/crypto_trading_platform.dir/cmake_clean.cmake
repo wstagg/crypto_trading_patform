@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o"
+  "CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o.d"
   "CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o"
   "CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o.d"
   "CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o"

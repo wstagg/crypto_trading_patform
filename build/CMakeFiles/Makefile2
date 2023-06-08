@@ -837,12 +837,12 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/crypto_trading_platform.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target crypto_trading_platform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target crypto_trading_platform"
 .PHONY : CMakeFiles/crypto_trading_platform.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/crypto_trading_platform.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/crypto_trading_platform.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles 0
 .PHONY : CMakeFiles/crypto_trading_platform.dir/rule

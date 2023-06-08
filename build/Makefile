@@ -523,6 +523,30 @@ crypto_trading_platform/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/build
 .PHONY : crypto_trading_platform/fast
 
+CSV_reader.o: CSV_reader.cpp.o
+.PHONY : CSV_reader.o
+
+# target to build an object file
+CSV_reader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o
+.PHONY : CSV_reader.cpp.o
+
+CSV_reader.i: CSV_reader.cpp.i
+.PHONY : CSV_reader.i
+
+# target to preprocess a source file
+CSV_reader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.i
+.PHONY : CSV_reader.cpp.i
+
+CSV_reader.s: CSV_reader.cpp.s
+.PHONY : CSV_reader.s
+
+# target to generate assembly for a file
+CSV_reader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.s
+.PHONY : CSV_reader.cpp.s
+
 Merkel_main.o: Merkel_main.cpp.o
 .PHONY : Merkel_main.o
 
@@ -683,6 +707,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... crypto_trading_platform"
+	@echo "... CSV_reader.o"
+	@echo "... CSV_reader.i"
+	@echo "... CSV_reader.s"
 	@echo "... Merkel_main.o"
 	@echo "... Merkel_main.i"
 	@echo "... Merkel_main.s"

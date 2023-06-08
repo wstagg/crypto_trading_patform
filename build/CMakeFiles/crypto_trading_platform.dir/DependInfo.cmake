@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/CSV_reader.cpp" "CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o" "gcc" "CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o.d"
   "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/Merkel_main.cpp" "CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o" "gcc" "CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o.d"
   "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.cpp" "CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o" "gcc" "CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o.d"
   "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/main.cpp" "CMakeFiles/crypto_trading_platform.dir/main.cpp.o" "gcc" "CMakeFiles/crypto_trading_platform.dir/main.cpp.o.d"
