@@ -7,8 +7,6 @@ double compute_average_price(std::vector<Order_book_entry>& entries);
 double compute_low_price(std::vector<Order_book_entry>& entries);
 double compute_high_price(std::vector<Order_book_entry>& entries);
 
-std::vector<std::string> tokenise(std::string csv_line, char seperator);
-
 
 
 
