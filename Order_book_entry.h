@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-enum class Order_book_type {bid, ask};
+enum class Order_book_type {bid, ask, unknown};
 
 class Order_book_entry
 {
@@ -15,5 +15,7 @@ public:
 	Order_book_type order_type;
 	double price;
 	double amount;
+
+    static Order_book_type string_to_orderbook_type (const std::string& s);
 };
 

@@ -32,7 +32,8 @@ std::vector<std::string> tokenise(std::string csv_line, char seperator)
 		}
 		tokens.push_back(token);
 		start = end + 1;
-	} while (end != std::string::npos);
+
+    } while (end != std::string::npos);
 
 	return tokens;
 }

@@ -12,23 +12,26 @@
 #include "Order_book_entry.h"
 #include "order_book_functions.h"
 #include "Merkel_main.h"
+#include "CSV_reader.h"
 
 
 int main()
 {
+    std::vector<Order_book_entry> order_book = CSV_reader::read_csv("20200317.csv");
+
    std::string csv_file_name {"20200317.csv"};
    std::fstream csv_file (csv_file_name);
    std::string line {};
 
-   double price {};
-   double amount {};
+   std::vector <std::string> tokens;
+   std::vector<Order_book_entry> entries;
    
    if( csv_file.is_open())
    {
       while(std::getline(csv_file, line))
       {
          
-         std::vector <std::string> tokens = tokenise(line, ',');
+          tokens = tokenise(line, ',');
 
          if (tokens.size() != 5 )
          {
@@ -38,18 +41,14 @@ int main()
          /* Converts price token into double  */
          try
          {
-            price = std::stod(tokens[3]);   
-         }
-         catch(const std::exception& e)
-         {
-            std::cerr << e.what() << '\n';
-            continue;
-         }
+             std::string timestamp {tokens[0]};
+             std::string product {tokens[1]};
+             Order_book_type order_type = Order_book_entry::string_to_orderbook_type(tokens[2]) ;
+             double price {std::stod(tokens[3])};
+             double amount {std::stod(tokens[4])};
 
-         /* Converts amount token into double */
-         try
-         {
-            amount = std::stod(tokens[4]);
+             Order_book_entry obj {timestamp, product, order_type, price,amount};
+             entries.push_back(obj);
          }
          catch(const std::exception& e)
          {
@@ -58,7 +57,7 @@ int main()
          }
          
          /* Iterates over tokens */
-         for ( std::string l : tokens)
+         for ( std::string& l : tokens)
          {
             std::cout << l << std::endl;
          }
