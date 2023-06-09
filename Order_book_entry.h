@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 
 enum class Order_book_type {bid, ask, unknown};

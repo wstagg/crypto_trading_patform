@@ -643,30 +643,6 @@ order_book_functions.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.s
 .PHONY : order_book_functions.cpp.s
 
-tokenise.o: tokenise.cpp.o
-.PHONY : tokenise.o
-
-# target to build an object file
-tokenise.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/tokenise.cpp.o
-.PHONY : tokenise.cpp.o
-
-tokenise.i: tokenise.cpp.i
-.PHONY : tokenise.i
-
-# target to preprocess a source file
-tokenise.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/tokenise.cpp.i
-.PHONY : tokenise.cpp.i
-
-tokenise.s: tokenise.cpp.s
-.PHONY : tokenise.s
-
-# target to generate assembly for a file
-tokenise.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/tokenise.cpp.s
-.PHONY : tokenise.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -722,9 +698,6 @@ help:
 	@echo "... order_book_functions.o"
 	@echo "... order_book_functions.i"
 	@echo "... order_book_functions.s"
-	@echo "... tokenise.o"
-	@echo "... tokenise.i"
-	@echo "... tokenise.s"
 .PHONY : help
 
 

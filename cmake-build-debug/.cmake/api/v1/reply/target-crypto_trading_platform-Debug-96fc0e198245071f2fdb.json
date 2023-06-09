@@ -130,7 +130,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "CSV_reader.cpp",
+			"path" : "Csv_reader.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

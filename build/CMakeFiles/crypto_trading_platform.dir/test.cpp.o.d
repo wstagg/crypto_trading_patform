@@ -1,5 +1,5 @@
-CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o: \
-  /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Merkel_main.cpp \
+CMakeFiles/crypto_trading_platform.dir/test.cpp.o: \
+  /Users/wesleystagg/Desktop/c++/crypto_trading_patform/test.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__config \
@@ -730,7 +730,4 @@ CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/_types/_nl_item.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Merkel_main.h \
-  /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.h \
-  /Users/wesleystagg/Desktop/c++/crypto_trading_patform/CSV_reader.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h

@@ -13,7 +13,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.cpp" "CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o" "gcc" "CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o.d"
   "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/main.cpp" "CMakeFiles/crypto_trading_platform.dir/main.cpp.o" "gcc" "CMakeFiles/crypto_trading_platform.dir/main.cpp.o.d"
   "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/order_book_functions.cpp" "CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o" "gcc" "CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o.d"
-  "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/tokenise.cpp" "CMakeFiles/crypto_trading_platform.dir/tokenise.cpp.o" "gcc" "CMakeFiles/crypto_trading_platform.dir/tokenise.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

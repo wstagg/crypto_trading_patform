@@ -1,7 +1,6 @@
 CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o: \
   /Users/wesleystagg/Desktop/c++/crypto_trading_patform/CSV_reader.cpp \
   /Users/wesleystagg/Desktop/c++/crypto_trading_patform/CSV_reader.h \
-  /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -676,6 +675,7 @@ CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__functional/unary_negate.h \
+  /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/locale.h \

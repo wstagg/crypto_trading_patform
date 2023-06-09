@@ -1,5 +1,5 @@
 # ninja log v5
-5	441	1686260585397565342	CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o	b5760832856014db
+5	441	1686260585397565342	CMakeFiles/crypto_trading_platform.dir/Csv_reader.cpp.o	b5760832856014db
 333	372	1686261456744232104	crypto_trading_platform	170de02e077e5c8f
 5	288	1686260879389759361	CMakeFiles/crypto_trading_platform.dir/main.cpp.o	1bd578dceb093462
 5	318	1686262532106877817	CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o	86088a6b2dc1393e

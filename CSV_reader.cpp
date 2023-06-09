@@ -1,10 +1,12 @@
 //
 // Created by Wesley Stagg on 06/06/2023.
 //
-
 #include "CSV_reader.h"
+
 #include <fstream>
 #include <iostream>
+
+
 
 CSV_reader::CSV_reader()
 {

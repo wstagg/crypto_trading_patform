@@ -4,9 +4,10 @@
 
 #pragma once
 
-#include "Order_book_entry.h"
 #include <string>
 #include <vector>
+#include "Order_book_entry.h"
+
 
 class CSV_reader
 {
