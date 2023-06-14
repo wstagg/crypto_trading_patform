@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Merkel_main.h"
-#include "CSV_reader.h"
-
+#include "Order_book_entry.h"
 
 
 Merkel_main::Merkel_main()
@@ -12,7 +11,6 @@ Merkel_main::Merkel_main()
 
 void Merkel_main::init()
 {
-    load_orderbook();
     while (true)
     {
         print_menu();
@@ -21,12 +19,6 @@ void Merkel_main::init()
     }
     
 }
-
-void Merkel_main::load_orderbook()
-{
-    orders = CSV_reader::read_csv("20200317.csv");
-}
-
 
 /* Prints menu */
 void Merkel_main::print_menu()
@@ -113,25 +105,16 @@ void Merkel_main::print_help()
 /* Prints market stats */
 void Merkel_main::print_market_stats()
 {
-    std::cout << "The orderbook contains: " << orders.size() << std::endl;
-
-    unsigned int asks {0};
-    unsigned int bids {0};
-
-    for (Order_book_entry& e : orders)
+    std::string current_time = "2020/03/17 17:01:24.884492";
+    
+    for (const std::string& p : orderbook.get_known_products())
     {
-        if ( e.order_type == Order_book_type::bid)
-        {
-            ++bids;
-        }
-        if ( e.order_type == Order_book_type::ask)
-        {
-            ++asks;
-        }
+        std::cout << "Product: " << p << std::endl;
+        std::vector<Order_book_entry> entries = orderbook.get_orders(Order_book_type::ask, p, current_time);
+        std::cout << "Asks seen: " << entries.size() << std::endl;
+        std::cout << "Max ask: " << Orderbook::get_highest_price(entries) << std::endl;
+        std::cout << "Min ask: " << Orderbook::get_lowest_price(entries) << std::endl;
     }
-
-    std::cout << "Total asks: " << asks << std::endl;
-    std::cout << "Total bids: " << bids << std::endl;
 }
 
 /* User offer */

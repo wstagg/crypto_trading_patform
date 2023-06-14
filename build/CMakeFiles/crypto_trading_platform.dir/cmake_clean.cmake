@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o.d"
   "CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o"
   "CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o.d"
+  "CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o"
+  "CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o.d"
   "CMakeFiles/crypto_trading_platform.dir/main.cpp.o"
   "CMakeFiles/crypto_trading_platform.dir/main.cpp.o.d"
   "CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o"

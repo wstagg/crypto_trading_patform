@@ -595,6 +595,30 @@ Order_book_entry.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.s
 .PHONY : Order_book_entry.cpp.s
 
+Orderbook.o: Orderbook.cpp.o
+.PHONY : Orderbook.o
+
+# target to build an object file
+Orderbook.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o
+.PHONY : Orderbook.cpp.o
+
+Orderbook.i: Orderbook.cpp.i
+.PHONY : Orderbook.i
+
+# target to preprocess a source file
+Orderbook.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.i
+.PHONY : Orderbook.cpp.i
+
+Orderbook.s: Orderbook.cpp.s
+.PHONY : Orderbook.s
+
+# target to generate assembly for a file
+Orderbook.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.s
+.PHONY : Orderbook.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -692,6 +716,9 @@ help:
 	@echo "... Order_book_entry.o"
 	@echo "... Order_book_entry.i"
 	@echo "... Order_book_entry.s"
+	@echo "... Orderbook.o"
+	@echo "... Orderbook.i"
+	@echo "... Orderbook.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

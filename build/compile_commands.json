@@ -28,5 +28,11 @@
   "command": "/usr/bin/clang++    -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/CSV_reader.cpp",
   "file": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/CSV_reader.cpp",
   "output": "CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o"
+},
+{
+  "directory": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build",
+  "command": "/usr/bin/clang++    -std=c++20 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Orderbook.cpp",
+  "file": "/Users/wesleystagg/Desktop/c++/crypto_trading_patform/Orderbook.cpp",
+  "output": "CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o"
 }
 ]

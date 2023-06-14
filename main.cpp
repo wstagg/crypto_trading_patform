@@ -14,8 +14,6 @@ int main()
     Merkel_main app;
     app.init();
 
-
-  
     return 0;
 
 }
