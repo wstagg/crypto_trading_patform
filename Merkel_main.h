@@ -1,7 +1,7 @@
 #pragma once
 
+#include <string>
 #include <vector>
-#include "Order_book_entry.h"
 #include "Orderbook.h"
 
 class Merkel_main
@@ -14,6 +14,10 @@ public:
 
 private:
 	Orderbook orderbook{"20200317.csv"};
+	std::string current_time {};
+	std::string previous_day_time {};
+
+
 	int get_user_option();
 	void process_user_option(int user_selection);
 	void print_help();
