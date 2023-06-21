@@ -1,7 +1,11 @@
+#include <exception>
 #include <iostream>
+#include <ostream>
+#include <string>
 #include <vector>
+#include "CSV_reader.h"
 #include "Merkel_main.h"
-#include "Order_book_entry.h"
+#include "Orderbook_entry.h"
 #include "Orderbook.h"
 
 
@@ -52,15 +56,23 @@ void Merkel_main::print_menu()
 
     std::cout << "Current time: " << current_time << std::endl;
 
-    std::cout << "Enter 1-7: " << std::endl;
 }
 
-/* Takes user input */
+/* Takes user menu option*/
 int Merkel_main::get_user_option()
 {
-    int user_selection{};
-    std::cin >> user_selection;
-    std::cout << user_selection << " chosen." << std::endl;
+    int user_selection{0};
+    std::string line;
+    std::cout << "Enter 1-7: " << std::endl;
+    std::getline(std::cin, line );
+    
+    try {
+    user_selection = std::stoi(line);
+    } catch (const std::exception& e) 
+    {
+        
+    }
+    std::cout<< "You chose: " << user_selection << std::endl;
 
     return user_selection;
 }
@@ -82,7 +94,7 @@ void Merkel_main::process_user_option(int user_selection)
     }
     if (user_selection == 3)
     {
-        enter_offer();
+        enter_ask();
     }
     if (user_selection == 4)
     {
@@ -114,8 +126,8 @@ void Merkel_main::print_market_stats()
     for (const std::string& p : orderbook.get_known_products())
     {
         std::cout << "Product: " << p << std::endl;
-        std::vector<Order_book_entry> current_day_entries = orderbook.get_orders(Order_book_type::ask, p,   current_time);
-        std::vector<Order_book_entry> previous_day_entries = orderbook.get_orders(Order_book_type::ask, p,   previous_day_time);
+        std::vector<Orderbook_entry> current_day_entries = orderbook.get_orders(Orderbook_type::ask, p,   current_time);
+        std::vector<Orderbook_entry> previous_day_entries = orderbook.get_orders(Orderbook_type::ask, p,   previous_day_time);
 
         
         std::cout << "Asks seen: " << current_day_entries.size() << std::endl;
@@ -127,10 +139,21 @@ void Merkel_main::print_market_stats()
     }
 }
 
-/* User offer */
-void Merkel_main::enter_offer()
+/* Enter ask */
+void Merkel_main::enter_ask()
 {
-    std::cout << "Make an offer." << std::endl;
+    std::cout << "Make an ask - Enter amount: Product, Price, Amount. eg ETH/BTC,200,0.5" << std::endl;
+    std::string input;
+    std::getline(std::cin, input);
+
+    std::vector<std::string> tokens = CSV_reader::tokenise(input, ',');
+
+    Orderbook_entry obe = CSV_reader::strings_to_obe(current_time, 
+                                                    tokens[0], 
+                                                    Orderbook_type::ask, 
+                                                    tokens[1], 
+                                                    tokens[2]);
+    
 }
 
 /* Enter a bid */

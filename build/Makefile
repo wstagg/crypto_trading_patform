@@ -571,30 +571,6 @@ Merkel_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.s
 .PHONY : Merkel_main.cpp.s
 
-Order_book_entry.o: Order_book_entry.cpp.o
-.PHONY : Order_book_entry.o
-
-# target to build an object file
-Order_book_entry.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o
-.PHONY : Order_book_entry.cpp.o
-
-Order_book_entry.i: Order_book_entry.cpp.i
-.PHONY : Order_book_entry.i
-
-# target to preprocess a source file
-Order_book_entry.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.i
-.PHONY : Order_book_entry.cpp.i
-
-Order_book_entry.s: Order_book_entry.cpp.s
-.PHONY : Order_book_entry.s
-
-# target to generate assembly for a file
-Order_book_entry.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.s
-.PHONY : Order_book_entry.cpp.s
-
 Orderbook.o: Orderbook.cpp.o
 .PHONY : Orderbook.o
 
@@ -618,6 +594,30 @@ Orderbook.s: Orderbook.cpp.s
 Orderbook.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.s
 .PHONY : Orderbook.cpp.s
+
+Orderbook_entry.o: Orderbook_entry.cpp.o
+.PHONY : Orderbook_entry.o
+
+# target to build an object file
+Orderbook_entry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o
+.PHONY : Orderbook_entry.cpp.o
+
+Orderbook_entry.i: Orderbook_entry.cpp.i
+.PHONY : Orderbook_entry.i
+
+# target to preprocess a source file
+Orderbook_entry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.i
+.PHONY : Orderbook_entry.cpp.i
+
+Orderbook_entry.s: Orderbook_entry.cpp.s
+.PHONY : Orderbook_entry.s
+
+# target to generate assembly for a file
+Orderbook_entry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.s
+.PHONY : Orderbook_entry.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -713,12 +713,12 @@ help:
 	@echo "... Merkel_main.o"
 	@echo "... Merkel_main.i"
 	@echo "... Merkel_main.s"
-	@echo "... Order_book_entry.o"
-	@echo "... Order_book_entry.i"
-	@echo "... Order_book_entry.s"
 	@echo "... Orderbook.o"
 	@echo "... Orderbook.i"
 	@echo "... Orderbook.s"
+	@echo "... Orderbook_entry.o"
+	@echo "... Orderbook_entry.i"
+	@echo "... Orderbook_entry.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,5 +1,5 @@
 #include "Orderbook.h"
-#include "Order_book_entry.h"
+#include "Orderbook_entry.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -15,7 +15,7 @@ Orderbook::Orderbook(std::string csv_file)
 std::vector<std::string> Orderbook::get_known_products()
 {
     std::map<std::string, bool> product_map;
-    for ( const Order_book_entry& e : orders)
+    for ( const Orderbook_entry& e : orders)
     {
         product_map[e.product] = true;
     }
@@ -29,13 +29,13 @@ std::vector<std::string> Orderbook::get_known_products()
 }
 
 /* Returns vectors of orders from set filters */
-std::vector<Order_book_entry> Orderbook::get_orders(Order_book_type type, 
+std::vector<Orderbook_entry> Orderbook::get_orders(Orderbook_type type, 
                                                     std::string product, 
                                                     std::string timestamp)
 {
-    std::vector<Order_book_entry> filtered_orders;
+    std::vector<Orderbook_entry> filtered_orders;
     
-    for ( Order_book_entry& e : orders)
+    for ( Orderbook_entry& e : orders)
     {
         if ( e.order_type == type &&
              e.product == product &&
@@ -49,11 +49,11 @@ std::vector<Order_book_entry> Orderbook::get_orders(Order_book_type type,
 }
 
 /* Returns highest price in the sent set */
-double Orderbook::get_highest_price(std::vector<Order_book_entry>& orders)
+double Orderbook::get_highest_price(std::vector<Orderbook_entry>& orders)
 {
     double max{orders[0].price};
 
-    for ( const Order_book_entry& e : orders)
+    for ( const Orderbook_entry& e : orders)
     {
         if (e.price > max)
         {
@@ -65,11 +65,11 @@ double Orderbook::get_highest_price(std::vector<Order_book_entry>& orders)
 }
 
 /* Returns lowest price in the sent set */
-double Orderbook::get_lowest_price(std::vector<Order_book_entry>& orders)
+double Orderbook::get_lowest_price(std::vector<Orderbook_entry>& orders)
 {
     double min{orders[0].price};
 
-     for ( const Order_book_entry& e : orders)
+     for ( const Orderbook_entry& e : orders)
     {
         if (e.price < min)
         {
@@ -98,7 +98,7 @@ std::string Orderbook::get_next_time(std::string timestamp)
 {
     std::string next_timestamp{};
 
-    for (Order_book_entry& e : orders)
+    for (Orderbook_entry& e : orders)
     {
         if ( e.time_stamp > timestamp)
         {
@@ -124,15 +124,15 @@ std::string Orderbook::get_time( std::string timestamp)
 
 /* It takes input of the current days orders and the previous days orders and returns */
 /* and returns the difference betweens the current price and previous days price.     */
-double Orderbook::get_24hr_change(std::vector<Order_book_entry>& current_day_orders, std::vector<Order_book_entry>& previous_day_orders)
+double Orderbook::get_24hr_change(std::vector<Orderbook_entry>& current_day_orders, std::vector<Orderbook_entry>& previous_day_orders)
 {
     double change {};
     double current_price {};
     double prev_price {};
 
-    for (Order_book_entry& current : current_day_orders)
+    for (Orderbook_entry& current : current_day_orders)
     {
-        for (Order_book_entry& prev : previous_day_orders)
+        for (Orderbook_entry& prev : previous_day_orders)
         {
             if( get_time(current.time_stamp) == get_time(prev.time_stamp))
             {

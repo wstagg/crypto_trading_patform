@@ -97,24 +97,10 @@ CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Merkel_main.cpp -o CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.s
 
-CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o: CMakeFiles/crypto_trading_platform.dir/flags.make
-CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o: /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.cpp
-CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o: CMakeFiles/crypto_trading_platform.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o -MF CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o.d -o CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.cpp
-
-CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.cpp > CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.i
-
-CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Order_book_entry.cpp -o CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.s
-
 CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o: CMakeFiles/crypto_trading_platform.dir/flags.make
 CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o: /Users/wesleystagg/Desktop/c++/crypto_trading_patform/order_book_functions.cpp
 CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o: CMakeFiles/crypto_trading_platform.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o -MF CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o.d -o CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/order_book_functions.cpp
 
 CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.i: cmake_force
@@ -128,7 +114,7 @@ CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.s: cmake_force
 CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o: CMakeFiles/crypto_trading_platform.dir/flags.make
 CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o: /Users/wesleystagg/Desktop/c++/crypto_trading_patform/CSV_reader.cpp
 CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o: CMakeFiles/crypto_trading_platform.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o -MF CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o.d -o CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/CSV_reader.cpp
 
 CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.s: cmake_force
 CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o: CMakeFiles/crypto_trading_platform.dir/flags.make
 CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o: /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Orderbook.cpp
 CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o: CMakeFiles/crypto_trading_platform.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o -MF CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o.d -o CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Orderbook.cpp
 
 CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.i: cmake_force
@@ -153,24 +139,38 @@ CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Orderbook.cpp -o CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.s
 
+CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o: CMakeFiles/crypto_trading_platform.dir/flags.make
+CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o: /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Orderbook_entry.cpp
+CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o: CMakeFiles/crypto_trading_platform.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o -MF CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o.d -o CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o -c /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Orderbook_entry.cpp
+
+CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Orderbook_entry.cpp > CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.i
+
+CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wesleystagg/Desktop/c++/crypto_trading_patform/Orderbook_entry.cpp -o CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.s
+
 # Object files for target crypto_trading_platform
 crypto_trading_platform_OBJECTS = \
 "CMakeFiles/crypto_trading_platform.dir/main.cpp.o" \
 "CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o" \
-"CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o" \
 "CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o" \
 "CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o" \
-"CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o"
+"CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o" \
+"CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o"
 
 # External object files for target crypto_trading_platform
 crypto_trading_platform_EXTERNAL_OBJECTS =
 
 crypto_trading_platform: CMakeFiles/crypto_trading_platform.dir/main.cpp.o
 crypto_trading_platform: CMakeFiles/crypto_trading_platform.dir/Merkel_main.cpp.o
-crypto_trading_platform: CMakeFiles/crypto_trading_platform.dir/Order_book_entry.cpp.o
 crypto_trading_platform: CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o
 crypto_trading_platform: CMakeFiles/crypto_trading_platform.dir/CSV_reader.cpp.o
 crypto_trading_platform: CMakeFiles/crypto_trading_platform.dir/Orderbook.cpp.o
+crypto_trading_platform: CMakeFiles/crypto_trading_platform.dir/Orderbook_entry.cpp.o
 crypto_trading_platform: CMakeFiles/crypto_trading_platform.dir/build.make
 crypto_trading_platform: CMakeFiles/crypto_trading_platform.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wesleystagg/Desktop/c++/crypto_trading_patform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable crypto_trading_platform"

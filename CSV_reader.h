@@ -6,7 +6,7 @@
 
 #include <string>
 #include <vector>
-#include "Order_book_entry.h"
+#include "Orderbook_entry.h"
 
 
 class CSV_reader
@@ -14,11 +14,18 @@ class CSV_reader
 public:
     CSV_reader();
 
-    static std::vector<Order_book_entry> read_csv(std::string csv_file_name);
+    static std::vector<Orderbook_entry> read_csv(std::string csv_file_name);
+    static std::vector<std::string> tokenise(std::string, char seperator);
+
+    static Orderbook_entry strings_to_obe( std::string timestamp,
+                                            std::string product,
+                                            Orderbook_type orderbook_type,
+                                            std::string price_string, 
+                                            std::string amount_string);
+
 
 private:
-    static std::vector<std::string> tokenise(std::string, char seperator);
-    static Order_book_entry strings_to_obe(std::vector<std::string> strings);
+    static Orderbook_entry strings_to_obe(std::vector<std::string> strings);
 
 };
 

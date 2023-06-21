@@ -18,7 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Order_book_entry.cpp">
+    <ClCompile Include="Orderbook_entry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="order_book_functions.cpp">
@@ -32,7 +32,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Order_book_entry.h">
+    <ClInclude Include="Orderbook_entry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="order_book_functions.h">

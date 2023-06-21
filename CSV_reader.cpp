@@ -2,9 +2,12 @@
 // Created by Wesley Stagg on 06/06/2023.
 //
 #include "CSV_reader.h"
+#include "Orderbook_entry.h"
 
+#include <exception>
 #include <fstream>
 #include <iostream>
+#include <string>
 
 
 
@@ -13,13 +16,13 @@ CSV_reader::CSV_reader()
 
 }
 
-std::vector<Order_book_entry> CSV_reader::read_csv(std::string csv_file_name)
+std::vector<Orderbook_entry> CSV_reader::read_csv(std::string csv_file_name)
 {
     std::fstream csv_file (csv_file_name);
     std::string line {};
 
     std::vector <std::string> tokens;
-    std::vector<Order_book_entry> entries;
+    std::vector<Orderbook_entry> entries;
 
     if( csv_file.is_open())
     {
@@ -27,7 +30,7 @@ std::vector<Order_book_entry> CSV_reader::read_csv(std::string csv_file_name)
         {
             try
             {
-                Order_book_entry obj = strings_to_obe(tokenise(line, ','));
+                Orderbook_entry obj = strings_to_obe(tokenise(line, ','));
                 entries.push_back(obj);
             }
             catch(const std::exception& e )
@@ -43,7 +46,7 @@ std::vector<Order_book_entry> CSV_reader::read_csv(std::string csv_file_name)
 }
 
 /* Takes string and converts it to order book entry object */
-Order_book_entry CSV_reader::strings_to_obe(std::vector<std::string> tokens)
+Orderbook_entry CSV_reader::strings_to_obe(std::vector<std::string> tokens)
 {
     double price {};
     double amount {};
@@ -65,10 +68,10 @@ Order_book_entry CSV_reader::strings_to_obe(std::vector<std::string> tokens)
         std::cout << "Bad float: " << tokens[3] << "or " << tokens[4] << std::endl;
         throw;
     }
-     /* Creates Order_book_entry object with tokens */
-    Order_book_entry obj {tokens[0],
+     /* Creates Orderbook_entry object with tokens */
+    Orderbook_entry obj {tokens[0],
                           tokens[1],
-                          Order_book_entry::string_to_orderbook_type(tokens[2]),
+                          Orderbook_entry::string_to_orderbook_type(tokens[2]),
                           price,
                           amount};
     return obj;
@@ -107,3 +110,27 @@ std::vector<std::string> CSV_reader::tokenise(std::string csv_line, char seperat
     return tokens;
 }
 
+Orderbook_entry CSV_reader::strings_to_obe( std::string timestamp,
+                                            std::string product,
+                                            Orderbook_type orderbook_type,
+                                            std::string price_string, 
+                                            std::string amount_string)
+{
+    double price{};
+    double amount{};
+
+    try 
+    {
+    price = std::stod(price_string);
+    amount = std::stod(amount_string);
+    } catch (const std::exception& e) 
+    {
+        std::cout << "CSV_reader::strings_to_obe bad float " << price_string << std::endl;
+        std::cout << "CSV_reader::strings_to_obe bad float " << amount_string << std::endl;
+        throw;
+    }
+
+    Orderbook_entry obe {timestamp, product, orderbook_type, price, amount};
+
+    return obe;
+}

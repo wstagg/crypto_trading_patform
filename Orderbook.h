@@ -1,5 +1,5 @@
 #pragma once
-#include "Order_book_entry.h"
+#include "Orderbook_entry.h"
 #include "CSV_reader.h"
 #include <string>
 #include <vector>
@@ -14,15 +14,15 @@ public:
     std::vector<std::string> get_known_products();
 
     /* Returns vectors of orders from set filters */
-    std::vector<Order_book_entry> get_orders(Order_book_type type, 
+    std::vector<Orderbook_entry> get_orders(Orderbook_type type, 
                                   std::string product, 
                                   std::string timestamp);
 
     /* Returns highest bid in the sent set */
-    static double get_highest_price(std::vector<Order_book_entry>& orders);
+    static double get_highest_price(std::vector<Orderbook_entry>& orders);
 
     /* Returns lowest bid in the sent set */
-    static double get_lowest_price(std::vector<Order_book_entry>& orders);
+    static double get_lowest_price(std::vector<Orderbook_entry>& orders);
 
     /* Returns the earliest time in the orderbook */
     std::string get_earliest_time();
@@ -33,7 +33,7 @@ public:
     std::string get_next_time(std::string timestamp);
 
     /* Returns the change in the past 24 hrs */
-    double get_24hr_change(std::vector<Order_book_entry>& current_day_orders, std::vector<Order_book_entry>& previous_day_orders); 
+    double get_24hr_change(std::vector<Orderbook_entry>& current_day_orders, std::vector<Orderbook_entry>& previous_day_orders); 
 
     /* Gets the previous days time */
     std::string get_previous_day_time();
@@ -42,5 +42,5 @@ public:
     std::string get_time( std::string timestamp);
 
 private:
-    std::vector<Order_book_entry> orders;
+    std::vector<Orderbook_entry> orders;
 };

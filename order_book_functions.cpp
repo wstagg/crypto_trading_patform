@@ -1,5 +1,5 @@
 #include "order_book_functions.h"
-#include "Order_book_entry.h"
+#include "Orderbook_entry.h"
 #include <vector>
 #include <algorithm>
 #include <iostream>
@@ -7,7 +7,7 @@
 
 
 /* This computes the average of price of the entries in the order book entry vector */
-double compute_average_price(std::vector<Order_book_entry>& entries)
+double compute_average_price(std::vector<Orderbook_entry>& entries)
 {
     double total{ 0 };
 
@@ -21,7 +21,7 @@ double compute_average_price(std::vector<Order_book_entry>& entries)
 }
 
 /* This computes the lowest of price of the entries in the order book entry vector */
-double compute_low_price(std::vector<Order_book_entry>& entries)
+double compute_low_price(std::vector<Orderbook_entry>& entries)
 {
     double lowest{ entries[0].price};
 
@@ -39,7 +39,7 @@ double compute_low_price(std::vector<Order_book_entry>& entries)
 }
 
 /* This computes the highest of price of the entries in the order book entry vector */
-double compute_high_price(std::vector<Order_book_entry>& entries)
+double compute_high_price(std::vector<Orderbook_entry>& entries)
 {
     double highest{ entries[0].price };
 
