@@ -41,6 +41,13 @@ public:
     /* Get timestamp time */
     std::string get_time( std::string timestamp);
 
+    void insert_order(Orderbook_entry& order);
+
+    static bool compare_by_timestamp(Orderbook_entry& o1, Orderbook_entry& o2)
+    {
+        return o1.time_stamp < o2.time_stamp;
+    }
+
 private:
     std::vector<Orderbook_entry> orders;
 };

@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <algorithm> 
 
 /* Orderbook constructor, takes csvfile name */
 Orderbook::Orderbook(std::string csv_file)
@@ -144,4 +145,9 @@ double Orderbook::get_24hr_change(std::vector<Orderbook_entry>& current_day_orde
     return change = current_price - prev_price;
 }
 
+void Orderbook::insert_order(Orderbook_entry& order)
+{
+    orders.push_back(order);
+    std::sort(orders.begin(), orders.end(), Orderbook::compare_by_timestamp);
+}
 

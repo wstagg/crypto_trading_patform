@@ -38,7 +38,7 @@ void Merkel_main::print_menu()
     std::cout << "2. Show Exchange Stats:" << std::endl;
 
     // Make an offer
-    std::cout << "3. Make Offer:" << std::endl;
+    std::cout << "3. Make Ask:" << std::endl;
 
     // Make bid
     std::cout << "4. Make Bid:" << std::endl;
@@ -147,12 +147,27 @@ void Merkel_main::enter_ask()
     std::getline(std::cin, input);
 
     std::vector<std::string> tokens = CSV_reader::tokenise(input, ',');
-
-    Orderbook_entry obe = CSV_reader::strings_to_obe(current_time, 
+    if (tokens.size() != 3)
+    {
+        std::cout << "Bad input" << std::endl;
+    }
+    else
+    {
+        try
+        {
+            Orderbook_entry obe = CSV_reader::strings_to_obe(current_time, 
                                                     tokens[0], 
                                                     Orderbook_type::ask, 
                                                     tokens[1], 
                                                     tokens[2]);
+            orderbook.insert_order(obe);
+        }catch(const std::exception& e)
+        {
+            std::cout << "Bad input Merkel_main::enter_ask" << std::endl;
+        }
+        
+    
+    }
     
 }
 

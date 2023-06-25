@@ -121,8 +121,8 @@ Orderbook_entry CSV_reader::strings_to_obe( std::string timestamp,
 
     try 
     {
-    price = std::stod(price_string);
-    amount = std::stod(amount_string);
+        price = std::stod(price_string);
+        amount = std::stod(amount_string);
     } catch (const std::exception& e) 
     {
         std::cout << "CSV_reader::strings_to_obe bad float " << price_string << std::endl;
