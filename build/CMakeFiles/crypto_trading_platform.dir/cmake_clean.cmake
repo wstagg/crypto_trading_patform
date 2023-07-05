@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/crypto_trading_platform.dir/main.cpp.o.d"
   "CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o"
   "CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.o.d"
+  "CMakeFiles/crypto_trading_platform.dir/wallet.cpp.o"
+  "CMakeFiles/crypto_trading_platform.dir/wallet.cpp.o.d"
   "crypto_trading_platform"
   "crypto_trading_platform.pdb"
 )

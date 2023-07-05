@@ -151,3 +151,52 @@ void Orderbook::insert_order(Orderbook_entry& order)
     std::sort(orders.begin(), orders.end(), Orderbook::compare_by_timestamp);
 }
 
+std::vector<Orderbook_entry> Orderbook::match_asks_to_bid(std::string product, std::string timestamp)
+{
+    std::vector<Orderbook_entry> sales;
+
+    std::vector<Orderbook_entry> asks {get_orders(Orderbook_type::ask, product, timestamp)};
+    std::vector<Orderbook_entry> bids {get_orders(Orderbook_type::bid, product, timestamp)};
+
+    std::sort(asks.begin(), asks.end(), Orderbook::comapre_by_price_accend);
+    std::sort(bids.begin(), bids.end(), Orderbook::compare_by_price_desc);
+
+    for (Orderbook_entry& ask : asks )
+    {
+        for (Orderbook_entry& bid : bids )
+        {
+            /* There is a match */
+            if (bid.price >= ask.price)
+            {
+                Orderbook_entry sale {timestamp, product, Orderbook_type::sale, ask.price, 0};
+            
+                if (bid.amount == ask.amount)
+                {
+                    sale.amount = ask.amount;
+                    sales.push_back(sale);
+                    bid.amount = 0;
+                    break;
+                }
+                
+                if (bid.amount > ask.amount)
+                {
+                    sale.amount = bid.amount;
+                    sales.push_back(sale);
+                    bid.amount -= ask.amount;
+                    break;
+                }
+
+                if (bid.amount < ask.amount)
+                {
+                    sale.amount = bid.amount;
+                    sales.push_back(sale);
+                    ask.amount -= bid.amount;
+                    bid.amount =0;
+                    continue;
+                }
+                
+            }  
+        }
+    }
+    return sales;
+}

@@ -18,6 +18,8 @@ void Merkel_main::init()
 {
 	previous_day_time = orderbook.get_previous_day_time();
     current_time = orderbook.get_earliest_time();
+	
+	wallet.insert_currency("BTC", 10.0);
     
     while (true)
     {
@@ -160,27 +162,66 @@ void Merkel_main::enter_ask()
                                                     Orderbook_type::ask, 
                                                     tokens[1], 
                                                     tokens[2]);
-            orderbook.insert_order(obe);
+            if (wallet.can_fufill_order(obe))
+            {
+                std::cout << "wallet can fulfill order" << std::endl;
+                orderbook.insert_order(obe);
+            }
+            else
+            {   
+                std::cout << "wallet cannot fulfill order" << std::endl;
+            }
+            
         }catch(const std::exception& e)
         {
             std::cout << "Bad input Merkel_main::enter_ask" << std::endl;
         }
-        
-    
-    }
-    
+    }   
 }
 
 /* Enter a bid */
 void Merkel_main::enter_bid()
 {
-    std::cout << "Make a bid " << std::endl;
+    std::cout << "Make an bid - Enter amount: Product, Price, Amount. eg ETH/BTC,200,0.5" << std::endl;
+    std::string input;
+    std::getline(std::cin, input);
+
+    std::vector<std::string> tokens = CSV_reader::tokenise(input, ',');
+    if (tokens.size() != 3)
+    {
+        std::cout << "Bad input" << std::endl;
+    }
+    else
+    {
+        try
+        {
+            Orderbook_entry obe = CSV_reader::strings_to_obe(current_time, 
+                                                    tokens[0], 
+                                                    Orderbook_type::bid, 
+                                                    tokens[1], 
+                                                    tokens[2]);
+            if (wallet.can_fufill_order(obe))
+            {
+                std::cout << "wallet can fulfill order" << std::endl;
+                orderbook.insert_order(obe);
+            }
+            else
+            {   
+                std::cout << "wallet cannot fulfill order" << std::endl;
+            }
+            
+        }catch(const std::exception& e)
+        {
+            std::cout << "Bad input Merkel_main::enter_bid" << std::endl;
+        }
+    }   
 }
 
 /* Prints user wallet */
 void Merkel_main::print_wallet()
 {
     std::cout << "Your wallet balance is:" << std::endl;
+    std::cout << wallet.to_string() << std::endl;
 }
 
 /* Moves to next time frame */
@@ -188,7 +229,12 @@ void  Merkel_main::next_time_frame()
 {
     std::cout << "Loading next time frame..." << std::endl;
 
-    //std:: cout << "Current time is "<< orderbook.get_next_time(current_time)<< std::endl;
+    std::vector<Orderbook_entry> sales = orderbook.match_asks_to_bid("ETH/BTC", current_time);
+    std::cout << "Sales; " << sales.size() << std::endl;
+    for (Orderbook_entry& sale : sales)
+    {
+        std::cout << "sale price: " << sale.price << " sale ammount:  " << sale.amount << std::endl;
+    }
     current_time = orderbook.get_next_time(current_time);
 
 }

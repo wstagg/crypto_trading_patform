@@ -667,6 +667,30 @@ order_book_functions.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/order_book_functions.cpp.s
 .PHONY : order_book_functions.cpp.s
 
+wallet.o: wallet.cpp.o
+.PHONY : wallet.o
+
+# target to build an object file
+wallet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/wallet.cpp.o
+.PHONY : wallet.cpp.o
+
+wallet.i: wallet.cpp.i
+.PHONY : wallet.i
+
+# target to preprocess a source file
+wallet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/wallet.cpp.i
+.PHONY : wallet.cpp.i
+
+wallet.s: wallet.cpp.s
+.PHONY : wallet.s
+
+# target to generate assembly for a file
+wallet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_trading_platform.dir/build.make CMakeFiles/crypto_trading_platform.dir/wallet.cpp.s
+.PHONY : wallet.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -725,6 +749,9 @@ help:
 	@echo "... order_book_functions.o"
 	@echo "... order_book_functions.i"
 	@echo "... order_book_functions.s"
+	@echo "... wallet.o"
+	@echo "... wallet.i"
+	@echo "... wallet.s"
 .PHONY : help
 
 

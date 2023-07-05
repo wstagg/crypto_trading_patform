@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "Orderbook.h"
+#include "Wallet.h"
 
 class Merkel_main
 {
@@ -28,7 +29,7 @@ private:
 	void next_time_frame();
 	bool exit_program();
 
-
+	Wallet wallet;
 
 };
 

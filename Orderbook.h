@@ -48,6 +48,18 @@ public:
         return o1.time_stamp < o2.time_stamp;
     }
 
+    static bool comapre_by_price_accend(Orderbook_entry& e1, Orderbook_entry& e2)
+    {
+        return e1.price < e2.price;
+    }
+    
+    static bool compare_by_price_desc(Orderbook_entry& e1, Orderbook_entry& e2)
+    {
+        return e1.price > e2.price;
+    }
+
+    std::vector<Orderbook_entry> match_asks_to_bid(std::string product, std::string timestamp);
+
 private:
     std::vector<Orderbook_entry> orders;
 };
