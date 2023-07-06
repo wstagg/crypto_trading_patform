@@ -162,6 +162,8 @@ void Merkel_main::enter_ask()
                                                     Orderbook_type::ask, 
                                                     tokens[1], 
                                                     tokens[2]);
+            obe.username = "simuser";
+            
             if (wallet.can_fufill_order(obe))
             {
                 std::cout << "wallet can fulfill order" << std::endl;
@@ -200,6 +202,8 @@ void Merkel_main::enter_bid()
                                                     Orderbook_type::bid, 
                                                     tokens[1], 
                                                     tokens[2]);
+            obe.username = "simuser";
+            
             if (wallet.can_fufill_order(obe))
             {
                 std::cout << "wallet can fulfill order" << std::endl;
@@ -234,6 +238,10 @@ void  Merkel_main::next_time_frame()
     for (Orderbook_entry& sale : sales)
     {
         std::cout << "sale price: " << sale.price << " sale ammount:  " << sale.amount << std::endl;
+        if (sale.username == "simuser")
+        {
+            wallet.process_sale(sale);
+        }
     }
     current_time = orderbook.get_next_time(current_time);
 

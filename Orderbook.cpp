@@ -168,7 +168,18 @@ std::vector<Orderbook_entry> Orderbook::match_asks_to_bid(std::string product, s
             /* There is a match */
             if (bid.price >= ask.price)
             {
-                Orderbook_entry sale {timestamp, product, Orderbook_type::sale, ask.price, 0};
+                Orderbook_entry sale {timestamp, product, Orderbook_type::ask_sale, ask.price, 0};
+                
+                if (bid.username == "simuser")
+                {
+                    sale.username = "simuser";
+                    sale.order_type = Orderbook_type::bid_sale;
+                }
+                if (ask.username == "simuser")
+                {
+                    sale.username = "simuser";
+                    sale.order_type = Orderbook_type::ask_sale;
+                }
             
                 if (bid.amount == ask.amount)
                 {
@@ -186,7 +197,7 @@ std::vector<Orderbook_entry> Orderbook::match_asks_to_bid(std::string product, s
                     break;
                 }
 
-                if (bid.amount < ask.amount)
+                if (bid.amount < ask.amount && bid.amount > 0)
                 {
                     sale.amount = bid.amount;
                     sales.push_back(sale);

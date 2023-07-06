@@ -22,9 +22,10 @@ public:
 
 	/* Checks to see if the wallet contains the currency or not */
 	bool contains_currency(std::string type, double amount);
-	
-    
 
+	/* Processes the the sale in to the wallet */
+	void process_sale(Orderbook_entry& sale);
+	
 private:
 	std::map<std::string,double> currencies;
 
